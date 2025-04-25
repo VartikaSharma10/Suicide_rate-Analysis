@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv("Death_rates_for_suicide__by_sex__race__Hispanic_origin__and_age__United_States.csv")
+df = pd.read_csv("Suicide_rate-Analysis/Death_rates_for_suicide__by_sex__race__Hispanic_origin__and_age__United_States.csv")
 df = df[df["ESTIMATE"].notna()]
 
 keywords = ['White', 'Black', 'Asian', 'American Indian', 'Hispanic']
@@ -11,6 +11,7 @@ race_df["RACE_GROUP"] = race_df["STUB_LABEL"].str.extract(r"(White|Black.*?|Asia
 race_df["RACE_GROUP"] = race_df["RACE_GROUP"].str.strip()
 
 # 1. Bar Graph – Average suicide rate by race/ethnicity
+# This plot shows the average suicide rate for different racial/ethnic groups
 plt.figure(figsize=(8,5))
 race_avg = race_df.groupby("RACE_GROUP")["ESTIMATE"].mean().sort_values()
 race_avg.plot(kind='bar', title="Avg Suicide Rate by Racial/Ethnic Group", color='skyblue')
