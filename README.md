@@ -10,7 +10,7 @@ Understanding suicide trends is critical for shaping public health policies and 
 
 ---
 
-## 📁 Dataset Description
+## 📁 Dataset    Description
 
 The dataset includes variables such as:
 - **Year**
