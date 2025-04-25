@@ -18,7 +18,7 @@ The dataset includes variables such as:
 - **Sex**
 - **Age Group**
 - **Race** (if available)
-- **Number of Suicides**
+- **Number of Suicide**
 - **Population**
 - **Suicide Rate (calculated)**
 
